@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>商品出库管理</title>
+	<script src="../jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+	<div style="width: 40%;margin-left: 30%;margin-right: 30%;margin-top: 10%;font-size: 25px">
+		<h1 style="text-align: center;">商品出库</h1><br><br>
+		<form action="#" method="post" accept-charset="utf-8">
+			<b >出库商品：</b>
+				<select name='productId' id="s" style=" font-size: 25px;margin-left: 10%;background:gray" size="1" required>
+						<option value="0">--请选择出库商品--</option>
+					  </select><br/><br/>
+			<b style="font-size: 25px">出库数量：</b>
+				<input type="text" name="quantity" style="margin-left: 10%; font-size: 25px;" required/><br/><br/>
+			<b style="font-size: 25px">经手人：</b>
+				<input type="text" name="handler" style="margin-left: 15%; font-size: 25px;" required/><br/><br/>
+			<input type="button" name="submit" id="submit" value="提交" style=" font-size: 25px;margin-left: 20%;"/>
+			<input type="reset" name="reset" value="重置" style=" font-size: 25px;margin-left: 20%;"><br/>
+		</form>
+	</div>
+	<script src="takeout.js"></script>
+</body>
+
+</html>

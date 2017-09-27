@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.neusoft.bean">
+   <class name="TakeOut" table="TakeOut">
+      <id name="id" column="ID">
+         <generator class="sequence">
+         	<param name="sequence">SQ_TAKEOUT</param>
+         </generator>
+      </id>
+      <property name="quantity" column="quantity"/>
+      <property name="outDate" column="outdate"/>
+      <property name="handler" column="handler"/>
+      <many-to-one name="Product" column="productid">
+      </many-to-one>
+	  
+        
+   </class>
+</hibernate-mapping>

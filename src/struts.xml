@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="ssh" namespace="/" extends="struts-default">
+       <action name="userAction" class="com.neusoft.action.UserAction">
+          <result name="success">/main.jsp</result>
+       </action>   
+    </package>
+    <package name="ssh1" namespace="/product" extends="json-default">
+	     <action name="add" class="com.neusoft.action.ProductAction" method="execute">  
+	        <result name="success" type="json">
+	        	<param name="includeProperties">productName,quantity</param>
+	        </result>  
+	     </action> 
+	     <action name="getById" class="com.neusoft.action.ProductAction" method="getById">  
+	        <result  name="getById" type="json">
+	        	<param name="includeProperties">quantity</param>
+	        </result>  
+	     </action> 
+	     <action name="getAll" class="com.neusoft.action.ProductAction" method="getAll">  
+	           <result name="getAll" type="json">
+	           	<param name="includeProperties">map.*</param>
+	           </result>   
+	     </action>
+    </package>
+    <package name="ssh2" namespace="/takeout" extends="json-default">
+	     <action name="add" class="com.neusoft.action.TakeOutAction" method="execute">  
+	        <result  type="json">
+	        	 <param name="includeProperties">handler</param> 
+	        </result>  
+	     </action> 
+	 </package>
+</struts>    

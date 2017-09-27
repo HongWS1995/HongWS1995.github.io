@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.neusoft.bean">
+   <class name="Product" table="product">
+      <id name="id" column="ID">
+         <generator class="sequence">
+         	<param name="sequence">SQ_PRODUCT</param>
+         </generator>
+      </id>
+      <property name="productName" column="productname"/>
+      <property name="quantity" column="quantity"/>
+   </class>
+</hibernate-mapping>
